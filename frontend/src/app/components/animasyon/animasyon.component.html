@@ -1,0 +1,39 @@
+<div class="banner">
+  <div class="content" *ngIf="animasyon">
+    <p style="font-size: 30px">{{ animasyon.name }}</p>
+    <h4>
+      <span>{{ animasyon.year }}</span>
+      <span><i>{{ animasyon.age }}+</i></span>
+      <span>{{ animasyon.category }}</span>
+      <span>{{ animasyon.minute }}&nbsp;dk.</span>
+    </h4>
+    <div style="text-align: center;">
+    <img src="{{ animasyon.url }}" style="width: 400px" />
+</div>
+    <p style="text-align: justify;">
+      {{ animasyon.explane }}
+    </p>
+
+    <div class="refer">
+      <span class="cast"
+        ><b class="start">Başroller : &nbsp;</b>{{ animasyon.starring }}</span
+      >
+      <span class="creator"
+        ><b class="start">Yönetmen : &nbsp;</b>{{ animasyon.creators }}</span
+      >
+    </div>
+
+    <div class="buttons">
+      <a href="{{ animasyon.trailer }}">Fragman</a>
+
+      <a href="/" style="background-color: blue">Anasayfaya Dön</a>
+      <p style="font-size: 10px;">
+        Resim Kaynak:&nbsp;{{animasyon.textMovieSource}}
+    </p>
+    <p style="font-size: 10px;">
+      Konu Özeti Kaynak:&nbsp;{{animasyon.pictureSource}}
+   </p>
+    </div>
+  </div>
+</div>
+<div class="trailer"></div>

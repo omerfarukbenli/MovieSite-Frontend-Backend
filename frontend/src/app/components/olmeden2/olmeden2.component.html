@@ -1,0 +1,44 @@
+
+    <div class="banner">
+
+
+      <div class="content" *ngIf="olmeden">
+<p style="font-size: 30px;">{{olmeden.name}}</p>
+          <h4>
+              <span>{{olmeden.year}}</span>
+              <span><i>{{olmeden.age}}+</i></span>
+
+              <span>{{olmeden.category}}</span>
+              <span>{{olmeden.minute}} &nbsp;dk.</span>
+          </h4>
+          <div style="text-align: center;">
+<img src="{{olmeden.url}}" style="width: 300px;">
+</div>
+          <p style="text-align: justify;">
+              {{olmeden.explane}}
+          </p>
+
+          <div class="refer">
+              <span class="cast"><b class="start">Starting : &nbsp;</b>{{olmeden.starring}}</span>
+              <span class="creator"><b class="start">Creators : &nbsp;</b>{{olmeden.creators}}</span>
+              <p style="font-size: 10px;">
+                Resim Kaynak: &nbsp;{{ olmeden.pictureSource }}
+            </p>
+            <p style="font-size: 10px;">
+              Film Konu Özeti Kaynak: &nbsp;{{ olmeden.textMovieSource }}
+          </p>
+          </div>
+
+          <div class="buttons">
+              <a href="{{olmeden.trailer}}">Fragman</a>
+
+              <a href="/olmeden1" style="background-color: blue; ">Bütün Ölmeden Önce İzlemeniz Gereken Fİlmlere Dön</a>
+
+          </div>
+          <br>
+      <br>
+      </div>
+
+
+  </div>
+

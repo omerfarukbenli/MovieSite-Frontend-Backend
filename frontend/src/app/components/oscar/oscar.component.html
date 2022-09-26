@@ -1,0 +1,39 @@
+<div class="banner">
+  <div class="content" *ngIf="oscar">
+    <p style="font-size: 30px">{{ oscar.name }}</p>
+    <h4>
+      <span>{{ oscar.year }}</span>
+      <span><i>{{ oscar.age }}+</i></span>
+      <span>{{ oscar.category }}</span>
+      <span>{{ oscar.minute }}&nbsp;dk.</span>
+    </h4>
+    <div style="text-align: center;">
+    <img src="{{ oscar.url }}" style="width: 800px" />
+    </div>
+    <p style="text-align: justify;">
+      {{ oscar.explane }}
+    </p>
+
+    <div class="refer">
+      <span class="cast"
+        ><b class="start">Başroller :</b> &nbsp;{{ oscar.starring }}</span
+      >
+      <span class="creator"
+        ><b class="start">Yönetmen :</b> &nbsp;{{ oscar.creators }}</span
+      >
+    </div>
+
+    <div class="buttons">
+      <a href="{{ oscar.trailer }}">Fragman</a>
+
+      <a href="/" style="background-color: blue">Anasayfaya Dön</a>
+      <p style="font-size: 10px;">
+        Resim Kaynak: &nbsp;{{ oscar.pictureSource }}
+    </p>
+    <p style="font-size: 10px;">
+      Konu Özeti Kaynak: &nbsp;{{ oscar.textMovieSource }}
+  </p>
+    </div>
+  </div>
+</div>
+<div class="trailer"></div>

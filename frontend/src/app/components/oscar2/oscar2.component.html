@@ -1,0 +1,48 @@
+<div class="banner">
+  <div class="content" *ngIf="oscar">
+    <p style="font-size: 30px">{{ oscar.name }}</p>
+    <h4>
+      <span>{{ oscar.year }}</span>
+      <span
+        ><i>{{ oscar.age }}+</i></span
+      >
+      <span>4 seasons</span>
+      <span>{{ oscar.category }}</span>
+      <span>{{ oscar.minute }} &nbsp;dk.</span>
+    </h4>
+    <div style="text-align: center">
+      <img src="{{ oscar.url }}" style="width: 300px" />
+    </div>
+    <p style="text-align: justify">
+      {{ oscar.explane }}
+    </p>
+
+    <div class="refer">
+      <span class="cast"
+        ><b class="start">Starting : &nbsp;</b>{{ oscar.starring }}</span
+      >
+      <span class="creator"
+        ><b class="start">Creators : &nbsp;</b>{{ oscar.creators }}</span
+      >
+      <p style="font-size: 10px;">
+        Resim Kaynak: &nbsp;{{ oscar.pictureSource }}
+    </p>
+    <p style="font-size: 10px;">
+      Film Konu Özeti Kaynak: &nbsp;{{ oscar.textMovieSource }}
+  </p>
+    </div>
+
+    <div class="buttons">
+      <a href="{{ oscar.trailer }}">Fragman</a>
+
+      <a href="/oscar1" style="background-color: blue"
+        >Bütün Oscarlı Fİlmlere Dön</a
+      >
+
+    </div>
+    <br>
+    <br>
+  </div>
+</div>
+
+

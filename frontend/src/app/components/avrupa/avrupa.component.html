@@ -1,0 +1,45 @@
+
+    <div class="banner">
+
+
+      <div class="content" *ngIf="avrupa">
+<p style="font-size: 30px;">{{avrupa.name}}</p>
+          <h4>
+              <span>{{avrupa.year}}</span>
+              <span><i>{{avrupa.age}}+</i></span>
+              <span>{{avrupa.category}}</span>
+              <span>{{avrupa.minute}}&nbsp;dk.</span>
+          </h4>
+          <div style="text-align: center;">
+<img src="{{avrupa.url}}" style="width: 500px;">
+</div>
+          <p style="text-align: justify;">
+              {{avrupa.explane}}
+          </p>
+
+          <div class="refer">
+              <span class="cast"><b class="start">Starting :</b> &nbsp;{{avrupa.starring}}</span>
+              <span class="creator"><b class="start">Creators :</b> &nbsp;{{avrupa.creators}}</span>
+          </div>
+
+          <div class="buttons">
+              <a href="{{avrupa.trailer}}">Fragman</a>
+
+              <a href="/" style="background-color: blue; ">Anasayfaya Dön</a>
+              <p style="font-size: 10px;">
+                Resim Kaynak:&nbsp;{{avrupa.textMovieSource}}
+            </p>
+            <p style="font-size: 10px;">
+              Konu Özeti Kaynak:&nbsp;{{avrupa.pictureSource}}
+          </p>
+          </div>
+      </div>
+
+
+  </div>
+  <div class="trailer">
+
+
+  </div>
+
+

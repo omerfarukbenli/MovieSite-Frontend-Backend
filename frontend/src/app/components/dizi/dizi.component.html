@@ -1,0 +1,46 @@
+
+    <div class="banner">
+
+
+      <div class="content" *ngIf="dizi">
+<p style="font-size: 30px;">{{dizi.name}}</p>
+          <h4>
+              <span>{{dizi.year}}</span>
+              <span><i>{{dizi.age}}+</i></span>
+
+              <span>{{dizi.category}}</span>
+              <span>{{dizi.minute}} Sezon</span>
+          </h4>
+          <div style="text-align: center;">
+<img src="{{dizi.url}}" style="width: 400px;">
+</div>
+          <p style="text-align: justify;">
+              {{dizi.explane}}
+          </p>
+
+          <div class="refer">
+              <span class="cast"><b class="start">Başroller : &nbsp;</b>{{dizi.starring}}</span>
+              <span class="creator"><b class="start">Yönetmen : &nbsp;</b>{{dizi.creators}}</span>
+          </div>
+
+          <div class="buttons">
+              <a href="{{dizi.trailer}}">Fragman</a>
+
+              <a href="/" style="background-color: blue; ">Anasayfaya Dön</a>
+              <p style="font-size: 10px;">
+                Resim Kaynak:&nbsp;{{dizi.pictureSource}}
+            </p>
+            <p style="font-size: 10px;">
+              Konu Özeti Kaynak:&nbsp;{{dizi.textMovieSource}}
+          </p>
+          </div>
+      </div>
+
+
+  </div>
+  <div class="trailer">
+
+
+  </div>
+
+

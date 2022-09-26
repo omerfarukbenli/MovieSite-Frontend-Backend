@@ -1,0 +1,45 @@
+<div class="banner">
+  <div class="content" *ngIf="avrupa">
+    <p style="font-size: 30px">{{ avrupa.name }}</p>
+    <h4>
+      <span>{{ avrupa.year }}</span>
+      <span
+        ><i>{{ avrupa.age }}+</i></span
+      >
+      <span>4 seasons</span>
+      <span>{{ avrupa.category }}</span>
+    </h4>
+    <div style="text-align: center;">
+    <img src="{{ avrupa.url }}" style="width: 300px" />
+</div>
+    <p style="text-align: justify;">
+      {{ avrupa.explane }}
+    </p>
+
+    <div class="refer">
+      <span class="cast"
+        ><b class="start">Starting : &nbsp;</b>{{ avrupa.starring }}</span
+      >
+      <span class="creator"
+        ><b class="start">Creators : &nbsp;</b>{{ avrupa.creators }}</span
+      >
+      <p style="font-size: 10px;">
+        Resim Kaynak: &nbsp;{{ avrupa.pictureSource }}
+    </p>
+    <p style="font-size: 10px;">
+      Film Konu Özeti Kaynak: &nbsp;{{ avrupa.textMovieSource }}
+  </p>
+    </div>
+
+    <div class="buttons" style=" padding-bottom: 20px;">
+      <a href="{{ avrupa.trailer }}" >Fragman</a>
+
+      <a href="/avrupa1" style="  background-color: blue"
+        >Bütün Avrupa Fİlmlerİne Dön</a
+      >
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+

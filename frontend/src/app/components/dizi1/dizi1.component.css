@@ -1,0 +1,16 @@
+.container img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.container img{
+    padding: 10px 0px;
+    height: 350px;
+    border-radius: 50px;
+    transition: all 500ms ease-in-out;
+}
+
+.card{
+  background-color: rgb(10, 0, 6);
+  border-radius: 50px;
+
+}

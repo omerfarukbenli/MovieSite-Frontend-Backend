@@ -1,0 +1,49 @@
+
+    <div class="banner">
+
+
+      <div class="content" *ngIf="hollywood">
+<p style="font-size: 30px;">{{hollywood.name}}</p>
+          <h4>
+              <span>{{hollywood.year}}</span>
+              <span><i>{{hollywood.age}}+</i></span>
+              <span>{{hollywood.category}}</span>
+              <span>{{hollywood.minute}}&nbsp;dk.</span>
+          </h4>
+          <div style="text-align: center;">
+<img src="{{hollywood.url}}" style="width: 500px;">
+</div>
+<div style="text-align: justify;">
+          <p>
+              {{hollywood.explane}}
+          </p>
+</div>
+          <div class="refer">
+              <span class="cast"><b class="start">Başroller : &nbsp;</b>{{hollywood.starring}}</span>
+              <span class="creator"><b class="start">Yönetmen : &nbsp;</b>{{hollywood.creators}}</span>
+          </div>
+
+          <div class="buttons">
+              <a href="{{hollywood.trailer}}">Fragman</a>
+
+              <a href="/" style="background-color: blue; ">Anasayfaya Dön</a>
+              <p></p>
+
+              <p style="font-size: 10px;">
+                Resim Kaynak:&nbsp;{{hollywood.pictureSource}}
+            </p>
+            <p style="font-size: 10px;">
+              Konu Özeti Kaynak:&nbsp;{{hollywood.textMovieSource}}
+
+          </p>
+          </div>
+      </div>
+
+
+  </div>
+  <div class="trailer">
+
+
+  </div>
+
+

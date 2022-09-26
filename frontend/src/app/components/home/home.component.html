@@ -1,0 +1,286 @@
+<!--Header section-->
+
+
+
+
+
+<header>
+  <div class="logo" style="padding-top: 150px; ">
+
+    <a href="/"><img src="/assets/images/Ne İzlesen-1.png" style="   width: 220px; height:220px " /></a>
+
+  </div>
+  <div class="nav" id="small_menu">
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul>
+      <li><a href="">Anasayfa</a></li>
+      <li><a href="#hollywood">Hollywood</a></li>
+      <li><a href="#tollywood">Avrupa Sineması</a></li>
+      <li><a href="#youtube">Diziler</a></li>
+      <li><a href="#sollywood">Seri Filmler</a></li>
+      <li><a href="/info">İletişim</a></li>
+    </ul>
+  </div>
+
+  <div class="user"></div>
+</header>
+<!----------------->
+
+<!--Hero section-->
+<section>
+  <div class="heropage">
+    <div class="inside-heropage" *ngFor="let cnt of anasayfas">
+      <span>Vizyonda</span>
+      <div class="line1"></div>
+      <h1>{{ cnt.name }}</h1>
+      <p>
+
+        {{ cnt.category }} | {{ cnt.year }} | {{ cnt.country }} |
+        {{ cnt.minute }} dk.
+      </p>
+      <div class="btn1">
+        <a href="{{ cnt.trailer }}"
+          ><i class="fas fa-play"></i>Fragmanını izle</a
+        >&nbsp;
+        <a href="" [routerLink]="['/post', cnt.id]"
+          ><i class="fas fa-"></i>Konusunu oku</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="poster" *ngFor="let cnt of anasayfas">
+
+    <img src="{{cnt.url}}" style="width: 800px; height: 480px;"/>
+  </div>
+</section>
+
+<!------Lates movies---->
+<div class="latest-movies">
+  <h1>Oscarlı Filmler</h1>
+  <button class="btn btn-secondary" [routerLink]="['/oscar1']">Bütün Oscarlı Filmleri Gör</button>
+
+  <div class="latest-container">
+    <div class="latest-inside" *ngFor="let cnt of oscars">
+      <img
+        [routerLink]="['/oscar', cnt.id]"
+        src="{{ cnt.url }}"
+        alt=""
+        style="width: 250px"
+      />
+      <p></p>
+      <div class="heading1">
+        <h4>{{ cnt.name }}</h4>
+        <p class="c">{{ cnt.imdb }}</p>
+        <h6>{{ cnt.category }}</h6>
+      </div>
+      <div class="btn2">
+        <a href="{{ cnt.trailer }}">Fragman</a>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>
+
+<!---Hollywood Movies-->
+<section>
+  <div class="hollywood-movies" id="hollywood">
+    <h1>Hollywood Filmleri</h1>
+    <div class="hollywood-container">
+      <div class="hollywood-inside" *ngFor="let cnt of hollywoods">
+        <img
+          src="{{ cnt.url }}"
+          alt=""
+          [routerLink]="['/hollywood', cnt.id]"
+          style="width: 200px"
+        />
+        <p class="i">{{ cnt.imdb }}</p>
+        <p></p>
+        <p style="text-align: center;">{{ cnt.name }}</p>
+
+      </div>
+    </div>
+    <br />
+    <button class="btn btn-secondary" [routerLink]="['/hollywood1']">Bütün Hollywood Filmlerini Gör</button>
+  </div>
+  <div class="more1"></div>
+</section>
+<!------------->
+
+<!---tollywood Movies-->
+<section>
+  <div class="tollywood-movies" id="tollywood">
+    <h1>Avrupa Sineması</h1>
+    <div class="tollywood-container">
+      <div class="tollywood-inside" *ngFor="let cnt of avrupas">
+        <img
+          src="{{ cnt.url }}"
+          alt=""
+          [routerLink]="['/avrupa', cnt.id]"
+          style="width: 200px"
+        />
+        <p class="i">{{ cnt.imdb }}</p>
+        <p></p>
+        <p style="text-align: center;">{{ cnt.name }}</p>
+
+
+      </div>
+
+
+    </div>
+    <br />
+
+    <button class="btn btn-secondary" [routerLink]="['/avrupa1']">
+      Bütün Avrupa Sineması Filmlerini Gör
+    </button>
+  </div>
+
+  <div class="more2"></div>
+</section>
+<!------------->
+
+<!---collywood Movies-->
+<section>
+  <div class="collywood-movies" id="sollywood">
+    <h1>Seri Filmler</h1>
+    <div class="collywood-container">
+      <div class="collywood-inside" *ngFor="let cnt of seris">
+        <img
+          src="{{ cnt.url }}"
+          alt=""
+          [routerLink]="['/seri', cnt.id]"
+          style="width: 200px"
+        />
+        <p class="i">{{ cnt.imdb }}</p>
+        <p></p>
+        <p style="text-align: center;">{{ cnt.name }}</p>
+
+
+      </div>
+    </div>
+    <br />
+    <button class="btn btn-secondary" [routerLink]="['/seri1']">Bütün Seri Filmleri Gör</button>
+  </div>
+  <div class="more3"></div>
+</section>
+<!------------->
+
+<!---iollywood Movies-->
+<section>
+  <div class="iollywood-movies">
+    <h1>Animasyonlar</h1>
+    <div class="iollywood-container">
+      <div class="iollywood-inside" *ngFor="let cnt of animasyons">
+        <img
+          src="{{ cnt.url }}"
+          alt=""
+          [routerLink]="['/animasyon', cnt.id]"
+          style="width: 200px"
+        />
+        <p class="i">{{ cnt.imdb }}</p>
+        <p></p>
+        <p style="text-align: center;">{{ cnt.name }}</p>
+
+
+      </div>
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-secondary" [routerLink]="['/animasyon1']" >Bütün Animasyon Filmlerini Gör</button>
+  </div>
+  <div class="more4"></div>
+</section>
+<!------------->
+
+<!---sollywood Movies-->
+<section>
+  <div class="sollywood-movies">
+    <h1>Ölmeden önce izlemeniz gerekenler</h1>
+    <div class="sollywood-container">
+      <div class="sollywood-inside" *ngFor="let cnt of olmedens">
+        <img
+          src="{{ cnt.url }}"
+          alt=""
+          [routerLink]="['/olmeden', cnt.id]"
+          style="width: 200px"
+        />
+
+        <p class="i">{{ cnt.imdb }}</p>
+        <p></p>
+        <h5 style="text-align: justify;">{{ cnt.name }}</h5>
+
+
+
+      </div>
+    </div>
+    <br />
+    <button class="btn btn-secondary" [routerLink]="['/olmeden1']">Ölmeden Önce İzlemen Gereken Bütün Filmleri Gör</button>
+  </div>
+  <div class="more5"></div>
+</section>
+<!------------->
+
+<section class="akira" id="youtube">
+  <div class="line"></div>
+  <div class="yt-movies" >
+    <h1>Diziler</h1>
+    <p>En çok izlenen diziler</p>
+    <div class="yt-container"  >
+      <div class="inside-yt" style="margin-left: 5px;" *ngFor="let cnt of dizis">
+
+        <img
+          src="{{ cnt.url }}"
+          alt=""
+          [routerLink]="['/dizi', cnt.id]"
+          style="width: 250px"
+        />
+        <div class="heading2">
+          <p class="r">{{ cnt.imdb }}</p>
+          <p></p>
+          <p style="text-align: center;">{{ cnt.name }}</p>
+
+
+          <p><span></span></p>
+          <div class="like">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<div class="youtubebtn">
+  <!-- <a href="">Bütün Dizileri İncele<i class="fab fa-youtube" [routerLink]="['/dizi1']"></i></a> -->
+  <button class="btn btn-secondary "  [routerLink]="['/dizi1']">Bütün Dizileri Gör</button>
+</div>
+
+<!---Footer-->
+<div class="footer">
+  <div class="inside-footer">
+    <div class="footer-container">
+      <div class="logopart">
+
+        <img src="/assets/images/Ne İzlesen-1.png" style=" padding-top: 50px;  width: 200px; height:240px " />
+      </div>
+      <div class="copyright">
+        <p>© 2022 Neizlesen (neizlesen.com). Tüm hakları saklıdır.</p>
+        <a href="mailto:omerfarukbenli@hotmail.com">İletişim ve Telif Hakları Bildirimi İçin</a>
+
+      </div>
+
+
+      <div class="btn4"></div>
+    </div>
+  </div>
+</div>
+
+<!------>
+
+<!--Goto button-->
+<div class="scroll">
+  <a href=""><i class="fas fa-arrow-up"></i></a>
+</div>
+
+
+

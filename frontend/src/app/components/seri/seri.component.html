@@ -1,0 +1,47 @@
+
+    <div class="banner">
+
+
+      <div class="content" *ngIf="seri">
+<p style="font-size: 30px;">{{seri.name}}</p>
+          <h4>
+              <span>{{seri.year}}</span>
+              <span><i>{{seri.age}}+</i></span>
+              <span>{{seri.category}}</span>
+              <span>{{seri.minute}}&nbsp;dk.</span>
+
+
+          </h4>
+          <div style="text-align: center;">
+<img src="{{seri.url}}" style="width: 400px;">
+</div>
+          <p style="text-align: justify;">
+              {{seri.explane}}
+          </p>
+
+          <div class="refer">
+              <span class="cast"><b class="start">Başroller :</b> &nbsp;{{seri.starring}}</span>
+              <span class="creator"><b class="start">Yönetmen :</b> &nbsp;{{seri.creators}}</span>
+          </div>
+
+          <div class="buttons">
+              <a href="{{seri.trailer}}">Fragman</a>
+
+              <a href="/" style="background-color: blue; ">Anasayfaya Dön</a>
+              <p style="font-size: 10px;">
+                Resim Kaynak:&nbsp;{{seri.textMovieSource}}
+            </p>
+            <p style="font-size: 10px;">
+              Konu Özeti Kaynak:&nbsp;{{seri.pictureSource}}
+           </p>
+          </div>
+      </div>
+
+
+  </div>
+  <div class="trailer">
+
+
+  </div>
+
+

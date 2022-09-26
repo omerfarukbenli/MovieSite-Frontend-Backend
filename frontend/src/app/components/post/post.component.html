@@ -1,0 +1,47 @@
+
+
+
+    <div class="banner">
+
+
+        <div class="content" *ngIf="anasayfa">
+<p style="font-size: 60px;">{{anasayfa.name}}</p>
+            <h4>
+                <span>{{anasayfa.year}}</span>
+                <span><i>{{anasayfa.age}}+</i></span>
+                <span>{{anasayfa.category}}</span>
+                <span>{{anasayfa.minute}}&nbsp;dk.</span>
+            </h4>
+            <div style="text-align: center;">
+<img src="{{anasayfa.url}}" style="width: 800px;" >
+            </div>
+            <p style="text-align: justify;">
+                {{anasayfa.explane}}
+            </p>
+
+            <div class="refer">
+                <span class="cast"><b class="start">Başroller :</b> &nbsp;{{anasayfa.starring}}</span>
+                <span class="creator"><b class="start">Yönetmen :</b> &nbsp;{{anasayfa.creators}}</span>
+            </div>
+
+            <div class="buttons" style=" padding-bottom: 20px;">
+                <a href="{{anasayfa.trailer}}">Fragman</a>
+
+                <a href="/" style="background-color: blue; ">Anasayfaya Dön</a>
+                <p style="font-size: 10px;">
+                  Resim Kaynak:&nbsp;{{anasayfa.pictureSource}}
+              </p>
+              <p style="font-size: 10px;">
+                Konu Özeti Kaynak:&nbsp;{{anasayfa.textMovieSource}}
+            </p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="trailer">
+
+
+    </div>
+
+

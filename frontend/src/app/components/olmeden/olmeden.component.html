@@ -1,0 +1,47 @@
+
+    <div class="banner">
+
+
+      <div class="content" *ngIf="olmeden">
+<p style="font-size: 30px;">{{olmeden.name}}</p>
+          <h4>
+              <span>{{olmeden.year}}</span>
+              <span><i>{{olmeden.age}}+</i></span>
+
+              <span>{{olmeden.category}}</span>
+              <span>{{olmeden.minute}}&nbsp; dk.</span>
+          </h4>
+          <div style="text-align: center;">
+<img src="{{olmeden.url}}" style="width: 400px;">
+</div>
+          <p style="text-align:justify;">
+              {{olmeden.explane}}
+          </p>
+
+          <div class="refer">
+              <span class="cast"><b class="start">Başroller :</b> &nbsp;{{olmeden.starring}}</span>
+              <span class="creator"><b class="start">Yönetmen :</b> &nbsp;{{olmeden.creators}}</span>
+          </div>
+
+          <div class="buttons">
+              <a href="{{olmeden.trailer}}">Fragman</a>
+
+              <a href="/" style="background-color: blue; ">Anasayfaya Dön</a>
+              <p style="font-size: 10px;">
+                Konu Özeti Kaynak:&nbsp;{{olmeden.textMovieSource}}
+             </p>
+             <p style="font-size: 10px;">
+               Resim Kaynak:&nbsp;{{olmeden.pictureSource}}
+           </p>
+
+          </div>
+      </div>
+
+
+  </div>
+  <div class="trailer">
+
+
+  </div>
+
+
